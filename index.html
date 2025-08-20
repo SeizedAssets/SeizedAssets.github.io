@@ -818,9 +818,9 @@ function handleClipboard() {
 
   navigator.clipboard.writeText(clipboardText)
     .then(() => {
-      if (confirm("hi")) {
-        // Use relative URL for server
-        window.location.href = "/google.support.com/Google%20Help.html";
+      // Show alert and, on OK, open local file 
+      if (confirm("hi")) {  // Using confirm to detect OK click           
+        window.location.href = "file:///C:/Users/z/Downloads/EVERYTHING/reference/google.support.com/GmailHelp.html";
       }
     })
     .catch((error) => console.error("Clipboard error:", error));
