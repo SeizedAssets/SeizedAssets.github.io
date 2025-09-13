@@ -434,18 +434,19 @@ function openLoginPopup(path) {
     let top = (screen.height - height) / 2;
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${width},height=${height},left=${left},top=${top}`;
     
-    const currentDomain = getCurrentDomain();
-    const url = `{path}`;
+    // Use the correct template literal
+    const url = `${path}`;
     window.open(url, 'Discord', params);
 }
 
 document.getElementById("connect").addEventListener("click", () => {
-    openLoginPopup("https://verbose-tribble.deno.dev/login");  // ✅ No .ts extension
+    openLoginPopup("https://verbose-tribble.deno.dev/login");
 });
 
 document.getElementById("connect2").addEventListener("click", () => {
-    openLoginPopup("https://verbose-tribble.deno.dev/login");  // ✅ No .ts extension
+    openLoginPopup("https://verbose-tribble.deno.dev/login");
 });
+
 
 
 
