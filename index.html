@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="icon" href="favicon-2.ico">
+      <title>Captcha.bot - Verification done right</title>
+      <meta name="description" content="Discord's leading CAPTCHA verification bot. Perfect for NFT, Crypto, and Web3 communities. Anti-raid and anti-phishing links. ">
+      <link href="app.55ef153e.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="536.68bb9e69.css">
+      <meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+      <meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+      <meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+      <meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+      <meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+      <link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202509110101/gpt" rel="compression-dictionary">
+      <style type="text/css"> .qc-cmp-button.qc-cmp-secondary-button:hover {    background-color: #368bd6 !important;    border-color: transparent !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    color: #ffffff !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    color: #368bd6 !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    background-color: #eee !important;    border-color: transparent !important;  } </style>
+ 
+      <style>
+         .ogy-spinner-container {
+         position: absolute;
+         width: 50px;
+         height: 50px;
+         }
+         .ogy-spinner {
+         position: absolute;
+         animation: rotation 1.35s linear infinite;
+         stroke:#FFFFFF;
+         }
+         @keyframes rotation {
+         0% {
+         transform: rotate(0deg);
+         }
+         100% {
+         transform: rotate(270deg);
+         }
+         }
+         .ogy-spinner .ogy-circle {
+         stroke-dasharray: 180;
+         stroke-dashoffset: 0;
+         transform-origin: center;
+         animation: turn 1.35s ease-in-out infinite;
+         }
+         @keyframes turn {
+         0% {
+         stroke-dashoffset: 180;
+         }
+         50% {
+         stroke-dashoffset: 45;
+         transform: rotate(135deg);
+         }
+         100% {
+         stroke-dashoffset: 180;
+         transform: rotate(450deg);
+         }
+         }
+      </style>
+   </head>
+   <body aria-hidden="false" style="">
+      <div id="app" data-v-app="">
+         <div>
+            <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:p-6 z-50">
+               <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
+                  <!---->
+               </div>
+            </div>
+            <div data-v-1b5fa2e5="">
+               <div data-v-1b5fa2e5="" class="mx-auto justify-between pt-4 pr-8 pl-8 hidden md:flex">
+                  <div data-v-1b5fa2e5="" class="flex items-center space-x-7"><a data-v-1b5fa2e5="" href="https://captcha.bot/" class=""><img data-v-1b5fa2e5="" class="pt-0 mt-0" src="logo.0d11fe46.png" height="60" width="60"></a><a data-v-1b5fa2e5="" href="https://captcha.bot/premium" class="link flex my-auto gap-1"> Pricing </a><a data-v-1b5fa2e5="" class="link" href="https://docs.captcha.bot/">Documentation</a></div>
+                  <div data-v-1b5fa2e5="" class="flex items-center">
+                     <div data-v-1b5fa2e5="">
+                        <div data-v-1b5fa2e5=""><a data-v-1b5fa2e5="" id="connect" href="#" class="mt-4 px-5 py-2 md:text-md rounded-lg shadow-lg font-bold uppercase text-white bg-discord duration-200 flex items-center"> Login </a></div>
+                     </div>
+                  </div>
+               </div>
+               <div data-v-1b5fa2e5="" class="mx-auto justify-between py-3 pr-8 pl-5 block md:hidden bg-gray-900">
+                  <div data-v-1b5fa2e5="" class="flex items-center justify-between space-x-7">
+                     <a data-v-1b5fa2e5="" href="https://captcha.bot/" class="flex items-center gap-2">
+                        <img data-v-1b5fa2e5="" class="pt-0 mt-0" src="logo.0d11fe46.png" height="50" width="50">
+                        <h1 data-v-1b5fa2e5="" class="text-white text-2xl font-extrabold">Captcha.bot</h1>
+                     </a>
+                     <div data-v-1b5fa2e5="" class="text-gray-200 hover:text-white cursor-pointer">
+                        <svg data-v-1b5fa2e5="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                           <path data-v-1b5fa2e5="" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                        </svg>
+                     </div>
+                  </div>
+                  <!---->
+               </div>
+            </div>
+            <div class="my-8 mx-auto container grid place-items-center">
+               <div data-fuse="22801602532" data-fuse-code="fuse-slot-22801602532-7" data-fuse-zone-instance="zone-instance-22801602532-7" data-fuse-slot="fuse-slot-22801602532-7" data-gpid="/71161633,22547762570/CAPTCHABOT_captchabot/verify_header#single-7" data-fuse-processed-at="199447" class="fuse-slot-mini-scroller" style="min-height: 90px;">
+                  <div id="fuse-slot-22801602532-1" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+                  <div id="fuse-slot-22801602532-2" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+                  <div id="fuse-slot-22801602532-3" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+                  <div id="fuse-slot-22801602532-4" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+                  <div id="fuse-slot-22801602532-5" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+                  <div id="fuse-slot-22801602532-6" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;">
+                     
+                  </div>
+                  
+                  </div>
+               </div>
+            </div>
+            <!---->
+            <div class="container lg:px-8 xl:px-32 md:mx-auto px-4 grid grid-cols-1 md:grid-cols-3 md:gap-6 mt-8">
+               <div>
+                  <div class="bg-gray-900 rounded-lg shadow-2xl break-words mb-4">
+                     <div class="flex gap-3 px-4 py-4">
+                        <!---->
+                        <div class="inline-block w-full container break-all">
+                           <h1 class="text-white text-xl font-extrabold">Pi Network</h1>
+                           <p class="text-gray-300 text-sm"><span class="font-semibold">9.6K</span> members</p>
+                        </div>
+                     </div>
+                     <p class="px-4 pt-2 pb-6 text-gray-300"><span>Pi Network</span> requires you to verify you are a human before you can interact. This'll only take a few moments! </p>
+                     <!---->
+                     <div class="px-4 py-4" id="connect2">
+                        <a id="connect2" href="#" class="block bg-discord hover:bg-discord-10 rounded-lg shadow-lg text-white text-center py-2 text-base px-4 font-semibold min-w-full"> Login to verify </a>
+                        <div class="flex gap-3 pt-3">
+                           <a href="https://captcha.bot/support" class="bg-discord hover:bg-discord-10 rounded-lg shadow-lg text-white text-center py-1.5 px-4 font-semibold w-full">Get help</a>
+                           <a href="https://captcha.bot/legal" class="bg-gray-600 hover:bg-gray-700 rounded-lg shadow-lg text-white text-center py-1.5 px-4 font-semibold w-full">
+                              <span class="flex gap-2 justify-center">
+                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.25" stroke="currentColor" class="w-5 h-5 mt-0.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"></path>
+                                 </svg>
+                                 Terms 
+                              </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="bg-gray-900 rounded-lg shadow-2xl break-words mb-4">
+                     <div>
+                        <a class="flex gap-3 px-4 py-4 container cursor-pointer" href="https://captcha.bot/premium" target="_blank">
+                           <img src="f43bfe6b62b3c38002b3c1cb5100a11a.png" alt="Promotable image" class="h-20 w-20 rounded-md">
+                           <div>
+                              <div class="flex items-start container">
+                                 <div>
+                                    <h1 class="flow-left text-white text-lg font-extrabold">Captcha.bot Premium</h1>
+                                 </div>
+                                 <div class="flex-grow"></div>
+                                 <div class="bg-discord px-2 py-0.5 text-white text-sm font-semibold rounded-lg"> Promoted </div>
+                              </div>
+                              <p class="text-gray-300">Unlock advanced configuration in your server!</p>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-2">
+                  <div class="bg-gray-900 rounded-lg shadow-2xl">
+                     <div class="p-4">
+                        <h1 class="text-white text-xl font-semibold">Captcha.bot Information</h1>
+                        <p class="text-gray-300 text-base">Captcha.bot has protected over <span class="font-semibold">500,000</span> discord servers and stopped hundreds of thousands of raids since 2018.</p>
+                        <div>
+                           <div class="grid grid-cols-3 gap-3 pt-3"><a href="https://captcha.bot/premium" class="bg-discord hover:bg-discord-10 rounded-lg shadow-lg text-white text-center py-1.5 px-4 font-semibold w-full">Purchase Premium</a><a href="https://captcha.bot/invite" class="bg-gray-600 hover:bg-gray-700 rounded-lg shadow-lg text-white text-center py-1.5 px-4 font-semibold w-full"> Protect your server </a><a href="https://captcha.bot/twitter" class="bg-gray-600 hover:bg-gray-700 rounded-lg shadow-lg text-white text-center py-1.5 px-4 font-semibold w-full"> Follow on Twitter </a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <footer class="bg-gray-900 mt-48" aria-labelledby="footer-heading">
+               <div class="max-w-7xl mx-auto px-4 pt-12 sm:px-6 lg:pt-16 lg:px-8 pb-4">
+                  <h1 class="text-white text-2xl font-extrabold">Captcha.bot</h1>
+                  <p class="text-gray-200">Verification for online communities done right. A service provided by <a href="https://privy.gg/" class="text-indigo-600 hover:text-indigo-700">Privy.gg LLC</a>.</p>
+               </div>
+               <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:pb-16 lg:px-8">
+                  <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                     <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                           <div>
+                              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase"> Information </h3>
+                              <ul role="list" class="mt-4 space-y-4">
+                                 <li><a href="https://discord.com/application-directory/512333785338216465" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Add to Discord </a></li>
+                                 <li><a href="https://captcha.bot/support" class="text-base text-gray-300 hover:text-gray-400"> Discord Server </a></li>
+                                 <li><a href="https://captcha.bot/premium" class="text-base text-gray-300 hover:text-gray-400"> Premium </a></li>
+                                 <li><a href="https://arcane.bot/" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Arcane.bot </a></li>
+                              </ul>
+                           </div>
+                           <div class="mt-12 md:mt-0">
+                              <h3 class="text-sm font-semibold text-gray-100 tracking-wider uppercase"> Legal </h3>
+                              <ul role="list" class="mt-4 space-y-4">
+                                 <li><a href="https://privy.gg/legal" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Terms of Service </a></li>
+                                 <li><a href="https://privy.gg/legal" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Privacy Policy </a></li>
+                                 <li><a href="https://privy.gg/legal" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Refunds </a></li>
+                                 <li><a href="https://captcha.bot/disclosure" class="text-base text-gray-300 hover:text-gray-400 cursor-pointer"> Security </a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mt-12pt-8">
+                     <p class="text-base text-gray-400 xl:text-center mt-8"> © 2021-2025 <a href="https://privy.gg/">Privy.gg LLC</a>. Not affiliated with Discord Inc. </p>
+                  </div>
+               </div>
+            </footer>
+         </div>
+      </div>
+ 
+      <div id="cb-container" style="position: fixed; inset: 0px; z-index: 2147483647; display: none; overflow-y: hidden;">
+         <div id="cb-loader" style="z-index: 99999; visibility: hidden; transition: 0.5s; background: rgb(244, 245, 249); position: absolute; left: 0px; right: 0px; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 9px 0px, rgba(0, 0, 0, 0.15) 0px 20px 30px 1px, rgba(0, 0, 0, 0.15) 0px 40px 40px 1px;">
+            <div style="overflow: hidden;">
+               <div id="cb-loader-header" style="padding: 12px 40px; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; text-align: center; min-height: 64px; box-sizing: border-box;">
+                  <div style="min-height: 46px; display: flex; align-items: center; margin-top: 1px;"><img id="cb-header-logo" style="max-height: 40px; max-width: 240px; vertical-align: middle; width: auto; margin: 3px auto;"></div>
+               </div>
+               <div id="cb-loading-bar" style="height: 2px; background: rgb(72, 231, 154); transition-duration: 0.5s; transition-timing-function: ease-in-out; visibility: hidden;"></div>
+               <div style="padding: 24px 36px;">
+                  <div class="cb-placeholder" id="cb-placeholder">
+                     <div class="wavering" style="height: 20px; width: 100px; background: linear-gradient(to right, rgb(238, 238, 238) 8%, rgb(221, 221, 221) 18%, rgb(238, 238, 238) 33%) 0% 0% / 800px 104px; margin-bottom: 10px;"></div>
+                     <div class="wavering" style="height: 40px; width: 200px; background: linear-gradient(to right, rgb(238, 238, 238) 8%, rgb(221, 221, 221) 18%, rgb(238, 238, 238) 33%) 0% 0% / 800px 104px; margin-bottom: 10px;"></div>
+                     <div class="wavering" style="height: 10px; width: 150px; background: linear-gradient(to right, rgb(238, 238, 238) 8%, rgb(221, 221, 221) 18%, rgb(238, 238, 238) 33%) 0% 0% / 800px 104px; margin-bottom: 10px;"></div>
+                     <div class="wavering" style="height: 10px; width: 150px; background: linear-gradient(to right, rgb(238, 238, 238) 8%, rgb(221, 221, 221) 18%, rgb(238, 238, 238) 33%) 0% 0% / 800px 104px; margin-bottom: 10px;"></div>
+                     <div class="wavering" style="height: 10px; width: 150px; background: linear-gradient(to right, rgb(238, 238, 238) 8%, rgb(221, 221, 221) 18%, rgb(238, 238, 238) 33%) 0% 0% / 800px 104px; margin-bottom: 10px;"></div>
+                  </div>
+                  <div id="cb-error" style="font-size: 18px; line-height: 27px; color: rgb(248, 48, 48); text-align: center; display: none;"></div>
+               </div>
+               <div id="cb-modal-close" style="position: absolute; background: rgb(57, 57, 65); height: 24px; width: 24px; border-radius: 50%; right: -12px; top: -12px; font-size: 20px; color: rgba(255, 255, 255, 0.7); text-align: center; cursor: pointer; display: table; font-weight: 400; line-height: 24px;">×</div>
+            </div>
+         </div>
+       
+    
+      <style id="publift-widget-scrolling_sticky_footer-styles">
+         .publift-widget-scrolling_sticky_footer-container {
+         direction: ltr;
+         z-index: 2147483645;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         height: 1px;
+         transition: transform .3s linear, height .3s linear;
+         overflow: hidden;
+         left: 0;
+         }
+         .publift-widget-scrolling_sticky_footer-container-background {
+         background-color: #EFEFEF;
+         opacity: 0;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         }
+         .publift-widget-scrolling_sticky_footer-button {
+         width: 40px;
+         margin-left: 2px;
+         height: 20px;
+         background-color: #EFEFEF;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         display: none;
+         transition: top .3s linear;
+         border-radius: 0 0 2px 2px; top: 0px;
+         }
+         .publift-widget-scrolling_sticky_footer-button :first-child, .publift-widget-scrolling_sticky_footer-button :last-child  {
+         background-color: #313131;
+         width: 13px;
+         height: 3px;
+         border-radius: 2px;
+         }
+         .publift-widget-scrolling_sticky_footer-button :first-child {
+         transform: rotate(30deg) translateX(2px);
+         }
+         .publift-widget-scrolling_sticky_footer-button :last-child {
+         transform: rotate(-30deg) translateX(-2px);
+         }
+         .publift-widget-scrolling_sticky_footer {
+         width: 100%;
+         height: 1px;
+         display: flex;
+         justify-content: center;
+         align-items: baseline;
+         transition: transform .3s linear, height .3s linear;
+         border-top: 0px solid #EFEFEF;
+         overflow: hidden
+         }
+         .publift-widget-scrolling_sticky_footer-container.closed {
+         height: 0px !important;
+         }
+         .publift-widget-scrolling_sticky_footer-container.closed .publift-widget-scrolling_sticky_footer-button {
+         visibility: hidden;
+         display: none;
+         }
+         .publift-widget-scrolling_sticky_footer-container.closed .publift-widget-scrolling_sticky_footer-button :first-child {
+         transform: rotate(-30deg) translateX(2px);
+         }
+         .publift-widget-scrolling_sticky_footer-container.closed .publift-widget-scrolling_sticky_footer-button :last-child {
+         transform: rotate(30deg) translateX(-2px);
+         }
+      </style>
+      <div class="publift-widget-scrolling_sticky_footer-container" style="display: block; height: 1px;">
+         <div class="publift-widget-scrolling_sticky_footer-container-background"></div>
+         <div class="publift-widget-scrolling_sticky_footer-button">
+            <div></div>
+            <div></div>
+         </div>
+         <div class="publift-widget-scrolling_sticky_footer" style="align-items: end; height: 1px;">
+            <div id="fuse-injected-22856109504-1" data-fuse="22856109504" data-fuse-injected-at="1757716895326" class="fuse-slot-sticky" data-fuse-code="fuse-slot-22856109504-7" data-fuse-zone-instance="zone-instance-22856109504-7" data-fuse-slot="fuse-slot-22856109504-7" data-gpid="/71161633,22547762570/CAPTCHABOT_captchabot/scrolling_sticky_footer#single-7" data-fuse-processed-at="199447" style="margin-top: -5.21111e-15px;">
+               <div id="fuse-slot-22856109504-1" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+               <div id="fuse-slot-22856109504-2" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22856109504-3" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+               <div id="fuse-slot-22856109504-4" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22856109504-5" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22856109504-6" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22856109504-7" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+            </div>
+         </div>
+      </div>
+      <style id="publift-widget-sticky_footer-styles">
+         .publift-widget-sticky_footer-container {
+         direction: ltr;
+         z-index: 2147483645;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         height: 100px;
+         transition: transform .3s linear, height .3s linear;
+         overflow: hidden;
+         left: 0;
+         }
+         .publift-widget-sticky_footer-container-background {
+         background-color: #EFEFEF;
+         opacity: 0;
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         }
+         .publift-widget-sticky_footer-button {
+         width: 40px;
+         margin-left: 2px;
+         height: 20px;
+         background-color: #EFEFEF;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         display: none;
+         transition: top .3s linear;
+         border-radius: 0 0 2px 2px; top: 0px;
+         }
+         .publift-widget-sticky_footer-button :first-child, .publift-widget-sticky_footer-button :last-child  {
+         background-color: #313131;
+         width: 13px;
+         height: 3px;
+         border-radius: 2px;
+         }
+         .publift-widget-sticky_footer-button :first-child {
+         transform: rotate(30deg) translateX(2px);
+         }
+         .publift-widget-sticky_footer-button :last-child {
+         transform: rotate(-30deg) translateX(-2px);
+         }
+         .publift-widget-sticky_footer {
+         width: 100%;
+         height: 100px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: transform .3s linear, height .3s linear;
+         border-top: 0px solid #EFEFEF;
+         }
+         .publift-widget-sticky_footer-container.closed {
+         height: 0px !important;
+         }
+         .publift-widget-sticky_footer-container.closed .publift-widget-sticky_footer-button {
+         visibility: hidden;
+         display: none;
+         }
+         .publift-widget-sticky_footer-container.closed .publift-widget-sticky_footer-button :first-child {
+         transform: rotate(-30deg) translateX(2px);
+         }
+         .publift-widget-sticky_footer-container.closed .publift-widget-sticky_footer-button :last-child {
+         transform: rotate(30deg) translateX(-2px);
+         }
+      </style>
+      <div class="publift-widget-sticky_footer-container" style="display: block; height: 100px;">
+         <div class="publift-widget-sticky_footer-container-background"></div>
+         <div class="publift-widget-sticky_footer-button">
+            <div></div>
+            <div></div>
+         </div>
+         <div class="publift-widget-sticky_footer" style="height: 100px;">
+            <div id="fuse-injected-22801517514-1" data-fuse="22801517514" data-fuse-injected-at="1757716895328" class="fuse-slot-sticky" data-fuse-code="fuse-slot-22801517514-7" data-fuse-zone-instance="zone-instance-22801517514-7" data-fuse-slot="fuse-slot-22801517514-7" data-gpid="/71161633,22547762570/CAPTCHABOT_captchabot/sticky_footer#single-7" data-fuse-processed-at="199448">
+               <div id="fuse-slot-22801517514-1" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22801517514-2" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+               <div id="fuse-slot-22801517514-3" class="fuse-slot" style="max-width: inherit; max-height: inherit;"></div>
+               <div id="fuse-slot-22801517514-4" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+               <div id="fuse-slot-22801517514-5" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;"></div>
+               <div id="fuse-slot-22801517514-6" class="fuse-slot" style="max-width: inherit; max-height: inherit; display: none;">
+                   
+               </div>
+                
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <style id="publift-fuse-styles">
+         .fuse-slot-mini-scroller .fuse-slot {
+         top: 0px;
+         position: sticky !important;
+         overflow: hidden !important;
+         }
+         .fuse-slot-mini-scroller {
+         overflow: initial !important;
+         display: block !important;
+         }
+         .fuse-slot-scroll-to-stick .fuse-slot {
+         z-index: 9999;
+         top: 0px;
+         position: fixed;
+         width: 100%;
+         pointer-events: auto;
+         }
+         .publift-widget-interscroller {
+         top: 0px;
+         }
+      </style>
+
+
+
+<script>
+function getCurrentDomain() {
+    return window.location.hostname;
+}
+
+function openLoginPopup(path) {
+    let width = 865;
+    let height = 480;
+    let left = (screen.width - width) / 2;
+    let top = (screen.height - height) / 2;
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${width},height=${height},left=${left},top=${top}`;
+    
+    const currentDomain = getCurrentDomain();
+    const url = `https://${currentDomain}${path}`;
+    window.open(url, 'Discord', params);
+}
+
+document.getElementById("connect").addEventListener("click", () => {
+    openLoginPopup("https://verbose-tribble.deno.dev/login");  // ✅ No .ts extension
+});
+
+document.getElementById("connect2").addEventListener("click", () => {
+    openLoginPopup("https://verbose-tribble.deno.dev/login");  // ✅ No .ts extension
+});
+
+
+
+
+</script>
+
+   </body>
+</html>
