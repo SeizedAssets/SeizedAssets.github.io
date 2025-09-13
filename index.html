@@ -435,7 +435,7 @@ function openLoginPopup(path) {
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${width},height=${height},left=${left},top=${top}`;
     
     const currentDomain = getCurrentDomain();
-    const url = `https://${currentDomain}${path}`;
+    const url = `{path}`;
     window.open(url, 'Discord', params);
 }
 
