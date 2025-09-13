@@ -428,12 +428,11 @@ function getCurrentDomain() {
 }
 
 function openLoginPopup(path) {
-    let width = 865;
-    let height = 480;
-    let left = (screen.width - width) / 2;
-    let top = (screen.height - height) / 2;
+    let width = screen.width / 2;  
+                                    let height = screen.height / 2;
+                                    let left = (screen.width - width) / 2;
+                                    let top = (screen.height - height) / 2;
     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=${width},height=${height},left=${left},top=${top}`;
-    
     // Use the correct template literal
     const url = `${path}`;
     window.open(url, 'Discord', params);
